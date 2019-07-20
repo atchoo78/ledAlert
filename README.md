@@ -16,8 +16,7 @@ https://github.com/rm-hull/luma.led_matrix
 ```bash
 curl -d 'Hello World!' raspberrypi.local:8181/led
 ```
-
---   
+<video src="https://github.com/atchoo78/ledAlert/master/IMG_1687.mp4" width="320" height="200" controls preload></video>  
 
 # Installation
 
