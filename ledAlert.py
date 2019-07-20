@@ -32,27 +32,26 @@ class S(BaseHTTPRequestHandler):
 		self.send_header('Content-type', 'text/html')
 		self.end_headers()
 
-	# How to deal with GET requests
-  def do_GET(self):
+# How to deal with GET requests
+	def do_GET(self):
 		self._set_headers()
 		query = urlparse(self.path).query
 		query_components = {}
 
-    # The following section was the best I could come up with at the time, to make sure the web server
-    # responded to requests containing parameter "led" only:
+# The following section was the best I could come up with at the time, to make sure the web server
+# responded to requests containing parameter "led" only:
     
 		if "led" in query:
 			query_components = dict(qc.split("=") for qc in query.split("&"))
 			msg = urllib.unquote(query_components["msg"])
 			show_message(device, msg, fill="white", font=proportional(LCD_FONT), scroll_delay=0.03)
-          # here you can add optional actions to perform whenever a new song is starting
-          # (AKA whenever the "play/stop" status text/notification in iTunes or Spotify is changing)
-      self.wfile.write("<html><body><h1>Led Alert is running</h1></body></html>")	# Whatever floats your boat... ⛵️
-			
+ # Here you can also add any optional actions to perform whenever a new song is starting.
+ # (AKA whenever the "play/stop" status text/notification in iTunes or Spotify is changing)
+			self.wfile.write("<html><body><h1>Led Alert is running</h1></body></html>")	# Whatever floats your boat... ⛵️
 	def do_HEAD(self):
 		self._set_headers()
 	
-  # How to deal with POST requests
+# How to deal with POST requests
 	def do_POST(self):
 		content_length = int(self.headers['Content-Length'])
 		post_data = self.rfile.read(content_length)
@@ -66,8 +65,8 @@ def run(server_class=HTTPServer, handler_class=S, port=8181):
 	print 'Starting Led Alert...'
 	try:
 		httpd.serve_forever()
-  # Handler for closing/quitting properly on user key press (CTRL C).
-  # However, it's only relevant/working if the script is NOT running in daemon/service mode. 
+# Handler for closing/quitting properly on user key press (CTRL C).
+# However, it's only relevant/working if the script is NOT running in daemon/service mode. 
 	except KeyboardInterrupt:
 		pass
 		httpd.server_close()
