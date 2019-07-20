@@ -1,4 +1,4 @@
-# ledalert
+# LED Alert
 
 Lightweight HTTP server in Python, configured to receive text data via GET/POST and displaying it on a MAX7219 compatible scrolling LED display connected to a Raspberry Pi.
 
