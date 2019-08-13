@@ -5,6 +5,10 @@ Lightweight HTTP server in Python, configured to receive text data via GET/POST 
 Dependencies:
 https://github.com/rm-hull/luma.led_matrix
 
+
+
+<img src="https://media.giphy.com/media/RhplAXetjLuloS7vN4/giphy.gif" width="480" height="257">  
+
 # Usage
 
 #### HTTP/GET (Web browser):
@@ -16,7 +20,6 @@ https://github.com/rm-hull/luma.led_matrix
 ```bash
 curl -d 'Hello World!' raspberrypi.local:8181/led
 ```
-<video src="https://github.com/atchoo78/ledAlert/master/IMG_1687.mp4" width="320" height="200" controls preload></video>  
 
 # Installation
 
