@@ -74,6 +74,9 @@ To check the status of the ledAlert service (or any other system service, for th
 sudo systemctl status ledAlert.service
 ```
 
+<img src="https://atchoo.net/dev/img/1337.png">
+<small><small>1337 services awaits</small></small>
+
 
 
 4.```sudo reboot now```
