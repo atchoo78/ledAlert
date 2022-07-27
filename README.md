@@ -5,9 +5,7 @@ Lightweight HTTP server in Python, configured to receive text data via GET/POST 
 Dependencies:
 https://github.com/rm-hull/luma.led_matrix
 
-
-
-<img src="https://media.giphy.com/media/RhplAXetjLuloS7vN4/giphy.gif" width="480" height="257">  
+  
 
 # Usage
 
